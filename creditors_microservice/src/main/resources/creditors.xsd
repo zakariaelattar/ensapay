@@ -1,0 +1,35 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.cmi.com/xml/creditors"
+           targetNamespace="http://www.cmi.com/xml/creditors"
+           elementFormDefault="qualified">
+
+    <xs:element name="getCreditorsRequest">
+        <xs:complexType>
+            <xs:sequence>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getCreditorsResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="creditors" type="tns:creditor" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="creditor">
+        <xs:sequence>
+            <xs:element name="code" type="xs:string"/>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="categorie" type="tns:categorie"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
+    <xs:complexType name="categorie">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

@@ -1,0 +1,36 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://www.cmi.com/xml/account"
+           targetNamespace="http://www.cmi.com/xml/account"
+           elementFormDefault="qualified">
+
+    <xs:element name="createAccountValidationRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="client" type="tns:client"/>
+                <xs:element name="bank_id" type="xs:long"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="createAccountValidationResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="response" type="xs:boolean"/>
+            </xs:sequence>
+        </xs:complexType>
+
+    </xs:element>
+
+    <xs:complexType name="client">
+        <xs:sequence>
+            <xs:element name="cin" type="xs:string"/>
+            <xs:element name="first_name" type="xs:string"/>
+            <xs:element name="last_name" type="xs:string"/>
+
+        </xs:sequence>
+    </xs:complexType>
+
+
+
+
+</xs:schema>

@@ -1,0 +1,32 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.cmi.com/xml/forms"
+           targetNamespace="http://www.cmi.com/xml/forms"
+           elementFormDefault="qualified">
+
+    <xs:element name="getFormRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="creditor_id" type="xs:long"/>
+                <xs:element name="categorie_id" type="xs:long"/>
+
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getFormResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="fields" type="xs:string" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+
+
+    <xs:complexType name="categorie">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
