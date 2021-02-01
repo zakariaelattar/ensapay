@@ -1,0 +1,14 @@
+microservices:
+  can_config_service: 8888
+  can_proxy_mservice:  8088
+  can_register_service: 8761
+
+  create_payment_microservice: 8083
+  check_balance_microservice: 8084
+  creditors_microservice: 8085
+  form_microservice: 8086
+  unpay_microservice: 8087
+  confim_payment_microservice: 8089
+
+  bank: 8090
+

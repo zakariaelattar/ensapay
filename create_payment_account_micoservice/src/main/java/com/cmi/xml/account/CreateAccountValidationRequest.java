@@ -2,7 +2,7 @@
 // Ce fichier a été généré par l'implémentation de référence JavaTM Architecture for XML Binding (JAXB), v2.2.7 
 // Voir <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Toute modification apportée à ce fichier sera perdue lors de la recompilation du schéma source. 
-// Généré le : 2021.01.29 à 01:52:20 PM GMT 
+// Généré le : 2021.01.31 à 03:28:10 PM GMT 
 //
 
 
@@ -25,7 +25,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="client" type="{http://www.cmi.com/xml/account}client"/>
+ *         &lt;element name="cin" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="bank_id" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -37,39 +37,39 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "client",
+    "cin",
     "bankId"
 })
 @XmlRootElement(name = "createAccountValidationRequest")
 public class CreateAccountValidationRequest {
 
     @XmlElement(required = true)
-    protected Client client;
+    protected String cin;
     @XmlElement(name = "bank_id")
     protected long bankId;
 
     /**
-     * Obtient la valeur de la propriété client.
+     * Obtient la valeur de la propriété cin.
      * 
      * @return
      *     possible object is
-     *     {@link Client }
+     *     {@link String }
      *     
      */
-    public Client getClient() {
-        return client;
+    public String getCin() {
+        return cin;
     }
 
     /**
-     * Définit la valeur de la propriété client.
+     * Définit la valeur de la propriété cin.
      * 
      * @param value
      *     allowed object is
-     *     {@link Client }
+     *     {@link String }
      *     
      */
-    public void setClient(Client value) {
-        this.client = value;
+    public void setCin(String value) {
+        this.cin = value;
     }
 
     /**

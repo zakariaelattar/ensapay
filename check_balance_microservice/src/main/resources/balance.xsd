@@ -5,7 +5,7 @@
     <xs:element name="checkBalanceRequest">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="account_number" type="xs:long"/>
+                <xs:element name="account_number" type="xs:string"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>

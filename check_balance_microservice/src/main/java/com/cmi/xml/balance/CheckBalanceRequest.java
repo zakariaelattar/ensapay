@@ -2,7 +2,7 @@
 // Ce fichier a été généré par l'implémentation de référence JavaTM Architecture for XML Binding (JAXB), v2.2.7 
 // Voir <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Toute modification apportée à ce fichier sera perdue lors de la recompilation du schéma source. 
-// Généré le : 2021.01.29 à 02:30:21 PM GMT 
+// Généré le : 2021.01.31 à 04:10:02 PM GMT 
 //
 
 
@@ -25,7 +25,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="account_number" type="{http://www.w3.org/2001/XMLSchema}long"/>
+ *         &lt;element name="account_number" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -41,22 +41,30 @@ import javax.xml.bind.annotation.XmlType;
 @XmlRootElement(name = "checkBalanceRequest")
 public class CheckBalanceRequest {
 
-    @XmlElement(name = "account_number")
-    protected long accountNumber;
+    @XmlElement(name = "account_number", required = true)
+    protected String accountNumber;
 
     /**
      * Obtient la valeur de la propriété accountNumber.
      * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public long getAccountNumber() {
+    public String getAccountNumber() {
         return accountNumber;
     }
 
     /**
      * Définit la valeur de la propriété accountNumber.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setAccountNumber(long value) {
+    public void setAccountNumber(String value) {
         this.accountNumber = value;
     }
 

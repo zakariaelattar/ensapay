@@ -23,10 +23,8 @@ public class Account {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private long account_number;
+    private String account_number;
     private double amount;
 
-    @ManyToOne
-    private Client client;
 }
 

@@ -40,16 +40,16 @@ public class AccountEndpoint implements MessageHandler {
 
        System.out.println("web service intercepted request");
        Information information = new Information();
-        information.setCin(createAccountValidationRequest.getClient().getCin());
+        information.setCin(createAccountValidationRequest.getCin());
         information.setBank_id(createAccountValidationRequest.getBankId());
 
-       boolean validation = accountService.validateAccountCreation(information);
+       String validation = accountService.validateAccountCreation(information);
         System.out.println("web service validation:"+validation);
 
-       if(validation){
-           accountService.createAccount(information);
-
+       if(!validation.equals("9999999")){
            createAccountValidationResponse.setResponse(validation);
+           //accountService.createAccount(information);
+
 
        }
 

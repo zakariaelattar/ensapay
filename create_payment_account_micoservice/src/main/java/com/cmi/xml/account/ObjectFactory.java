@@ -2,7 +2,7 @@
 // Ce fichier a été généré par l'implémentation de référence JavaTM Architecture for XML Binding (JAXB), v2.2.7 
 // Voir <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Toute modification apportée à ce fichier sera perdue lors de la recompilation du schéma source. 
-// Généré le : 2021.01.29 à 01:52:20 PM GMT 
+// Généré le : 2021.01.31 à 03:28:10 PM GMT 
 //
 
 
@@ -42,14 +42,6 @@ public class ObjectFactory {
      */
     public CreateAccountValidationRequest createCreateAccountValidationRequest() {
         return new CreateAccountValidationRequest();
-    }
-
-    /**
-     * Create an instance of {@link Client }
-     * 
-     */
-    public Client createClient() {
-        return new Client();
     }
 
     /**

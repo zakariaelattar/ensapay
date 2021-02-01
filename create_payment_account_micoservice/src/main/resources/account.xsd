@@ -6,7 +6,7 @@
     <xs:element name="createAccountValidationRequest">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="client" type="tns:client"/>
+                <xs:element name="cin" type="xs:string"/>
                 <xs:element name="bank_id" type="xs:long"/>
             </xs:sequence>
         </xs:complexType>
@@ -15,20 +15,13 @@
     <xs:element name="createAccountValidationResponse">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="response" type="xs:boolean"/>
+                <xs:element name="response" type="xs:string"/>
             </xs:sequence>
         </xs:complexType>
 
     </xs:element>
 
-    <xs:complexType name="client">
-        <xs:sequence>
-            <xs:element name="cin" type="xs:string"/>
-            <xs:element name="first_name" type="xs:string"/>
-            <xs:element name="last_name" type="xs:string"/>
 
-        </xs:sequence>
-    </xs:complexType>
 
 
 

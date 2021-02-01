@@ -11,7 +11,7 @@ public class BalanceServiceImpl implements BalanceService {
     @Autowired
     AccountRepository accountRepository;
     @Override
-    public double getBlance(long account_number) {
+    public double getBlance(String account_number) {
 
         try{
         Account account = accountRepository.findAccountByAccountnumber(account_number);

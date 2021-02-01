@@ -5,8 +5,9 @@ import com.cmi.create_payment_account_micoservice.entities.Information;
 
 public interface AccountService {
 
-    public abstract boolean validateAccountCreation(Information information) ;
+    public abstract String validateAccountCreation(Information information) ;
     public abstract Account createAccount(Information information) ;
+    public abstract String generateAccountNumber(String s);
 
 
 }

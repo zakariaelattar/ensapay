@@ -1,6 +1,7 @@
 package com.cmi.creditors_microservice.api;
 
 
+import com.cmi.creditors_microservice.entities.Categorie;
 import com.cmi.creditors_microservice.services.CreditorsService;
 import com.cmi.xml.creditors.Creditor;
 import com.cmi.xml.creditors.GetCreditorsRequest;
@@ -28,7 +29,22 @@ public class CreditorListEndpoint {
 
         System.out.println("web service intercepted request");
 
-      getCreditorsResponse.setCreditors(new ArrayList<Creditor>());
+        List<Creditor> creditors = new ArrayList<>();
+        for (com.cmi.creditors_microservice.entities.Creditor c: creditorsService.getCreditors()
+             ) {
+            Creditor creditor = new Creditor();
+            creditor.setName(c.getName());
+            Categorie categorie = c.getCategorie();
+            com.cmi.xml.creditors.Categorie xmlCategorie = new com.cmi.xml.creditors.Categorie();
+            xmlCategorie.setName(categorie.getName());
+            creditor.setCategorie(xmlCategorie);
+            creditor.setCode(c.getCode());
+
+            creditors.add(creditor);
+
+        }
+
+      getCreditorsResponse.setCreditors(creditors);
 
         return getCreditorsResponse;
     }

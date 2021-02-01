@@ -19,14 +19,8 @@ public class CreditorServiceImpl implements CreditorsService {
     @Override
     public List<Creditor> getCreditors() {
 
-        //return creditorRepository.findAll();
-        Creditor c = new Creditor();
+        return creditorRepository.findAll();
 
-        c.setName("maroc telecom");
-        c.setCode("mt");
-     List<Creditor> creditors = new ArrayList<Creditor>();
-     creditors.add(c);
-     return creditors;
 
 
     }
