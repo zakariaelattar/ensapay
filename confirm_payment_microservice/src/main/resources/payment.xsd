@@ -7,7 +7,7 @@
             <xs:sequence>
                 <xs:element name="amount" type="xs:double"/>
                 <xs:element name="account_number" type="xs:long"/>
-                <xs:element name="creditor_id" type="xs:long"/>
+                <xs:element name="creditor_code" type="xs:long"/>
 
 
             </xs:sequence>

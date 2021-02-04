@@ -38,6 +38,7 @@ public class PayementServiceImpl implements PaymentService {
              * Save in batch the operation
              */
             account.setAmount(account.getAmount()-amount);
+            accountRepository.save(account);
             return account.getAmount();
         }
         catch (Exception e) {
